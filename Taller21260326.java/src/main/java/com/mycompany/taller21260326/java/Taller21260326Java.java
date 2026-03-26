@@ -80,6 +80,7 @@ public int tamaño() {
 }
 
 public void eliminar(int valor) {
+     Object cabeza = null;
     if (cabeza == null) return;
 
     if (cabeza.dato == valor) {
@@ -87,7 +88,7 @@ public void eliminar(int valor) {
         return;
     }
 
-    Nodo actual = cabeza;
+    Nodo actual = (Nodo) cabeza;
 
     while (actual.siguiente != null) {
         if (actual.siguiente.dato == valor) {
