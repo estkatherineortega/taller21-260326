@@ -65,3 +65,14 @@ public boolean buscar(int valor) {
     }
     return false;
 }
+
+public int tamaño() {
+    int contador = 0;
+    Nodo actual = cabeza;
+
+    while (actual != null) {
+        contador++;
+        actual = actual.siguiente;
+    }
+    return contador;
+}
