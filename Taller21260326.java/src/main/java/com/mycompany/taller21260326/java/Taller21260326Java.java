@@ -42,19 +42,13 @@ public void insertar(int dato) {
     }
 }
 
-public void insertar(int dato) {
-    Nodo nuevo = new Nodo(dato);
-     Object cabeza = null;
+public void mostrar() {
+     Nodo cabeza = null;
+    Nodo actual = cabeza;
 
-    if (cabeza == null) {
-        cabeza = nuevo;
-    } else {
-        Nodo actual = (Nodo) cabeza;
-        while (actual.siguiente != null) {
-            actual = actual.siguiente;
-        }
-        actual.siguiente = nuevo;
+    while (actual != null) {
+        System.out.print(actual.dato + " -> ");
+        actual = actual.siguiente;
     }
+    System.out.println("null");
 }
-
-
