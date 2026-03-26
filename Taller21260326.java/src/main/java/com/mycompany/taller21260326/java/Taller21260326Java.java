@@ -20,3 +20,10 @@ public class Taller21260326Java {
         this.siguiente = null;
     }
 }
+ public class ListaEnlazada {
+    private Nodo cabeza;
+
+    public ListaEnlazada() {
+        cabeza = null;
+    }
+}
