@@ -42,4 +42,19 @@ public void insertar(int dato) {
     }
 }
 
+public void insertar(int dato) {
+    Nodo nuevo = new Nodo(dato);
+     Object cabeza = null;
+
+    if (cabeza == null) {
+        cabeza = nuevo;
+    } else {
+        Nodo actual = (Nodo) cabeza;
+        while (actual.siguiente != null) {
+            actual = actual.siguiente;
+        }
+        actual.siguiente = nuevo;
+    }
+}
+
 
