@@ -34,10 +34,12 @@ public void insertar(int dato) {
     if (cabeza == null) {
         cabeza = nuevo;
     } else {
-        Nodo actual = cabeza;
+        Nodo actual = (Nodo) cabeza;
         while (actual.siguiente != null) {
             actual = actual.siguiente;
         }
         actual.siguiente = nuevo;
     }
 }
+
+
