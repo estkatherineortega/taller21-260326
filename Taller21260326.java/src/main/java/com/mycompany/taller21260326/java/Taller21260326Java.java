@@ -54,6 +54,7 @@ public void mostrar() {
 }
 
 public boolean buscar(int valor) {
+     Nodo cabeza = null;
     Nodo actual = cabeza;
 
     while (actual != null) {
