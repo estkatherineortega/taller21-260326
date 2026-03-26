@@ -27,3 +27,17 @@ public class Taller21260326Java {
         cabeza = null;
     }
 }
+public void insertar(int dato) {
+    Nodo nuevo = new Nodo(dato);
+     Object cabeza = null;
+
+    if (cabeza == null) {
+        cabeza = nuevo;
+    } else {
+        Nodo actual = cabeza;
+        while (actual.siguiente != null) {
+            actual = actual.siguiente;
+        }
+        actual.siguiente = nuevo;
+    }
+}
