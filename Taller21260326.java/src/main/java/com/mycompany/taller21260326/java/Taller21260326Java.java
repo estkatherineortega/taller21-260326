@@ -52,3 +52,15 @@ public void mostrar() {
     }
     System.out.println("null");
 }
+
+public boolean buscar(int valor) {
+    Nodo actual = cabeza;
+
+    while (actual != null) {
+        if (actual.dato == valor) {
+            return true;
+        }
+        actual = actual.siguiente;
+    }
+    return false;
+}
