@@ -8,6 +8,7 @@ package com.mycompany.taller21260326.java;
  *
  * @author Katherine Ortega 
  * 6014550
+ * Katherine Ortega <est.katherine.ortega@unimilitar.edu.co>
  */
 public class Taller21260326Java {
 
@@ -68,6 +69,7 @@ public boolean buscar(int valor) {
 
 public int tamaño() {
     int contador = 0;
+     Nodo cabeza = null;
     Nodo actual = cabeza;
 
     while (actual != null) {
@@ -75,4 +77,23 @@ public int tamaño() {
         actual = actual.siguiente;
     }
     return contador;
+}
+
+public void eliminar(int valor) {
+    if (cabeza == null) return;
+
+    if (cabeza.dato == valor) {
+        cabeza = cabeza.siguiente;
+        return;
+    }
+
+    Nodo actual = cabeza;
+
+    while (actual.siguiente != null) {
+        if (actual.siguiente.dato == valor) {
+            actual.siguiente = actual.siguiente.siguiente;
+            return;
+        }
+        actual = actual.siguiente;
+    }
 }
