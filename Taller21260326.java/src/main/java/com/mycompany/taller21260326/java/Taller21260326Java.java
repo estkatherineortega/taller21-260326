@@ -98,3 +98,12 @@ public void eliminar(int valor) {
         actual = actual.siguiente;
     }
 }
+
+public int encontrarFaltante(int n) {
+    for (int i = 1; i <= n; i++) {
+        if (!buscar(i)) {
+            return i;
+        }
+    }
+    return -1;
+}
